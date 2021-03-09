@@ -1,5 +1,6 @@
-//Origin : Rui Santos site
+//Origin : Rui Santos site Servo example
 //Client is named "tolna"
+
 #include <ESP8266WiFi.h>
 #include <Servo.h>
 
@@ -8,8 +9,8 @@ Servo myservo;  // create servo object to control a servo
 // GPIO the servo is attached to
 static const int servoPin = 13;
 
-const char* ssid     = "Telekom-448483";
-const char* password = "9257677848914141";
+const char* ssid     = "Your SSID";
+const char* password = "Password";
 
 // Set web server port number to 80
 WiFiServer server(80);
@@ -95,13 +96,11 @@ void loop(){
             tolna.println("<style>body { text-align: center; font-family: \"Trebuchet MS\", Arial; margin-left:auto; margin-right:auto;}");
             tolna.println(".slider1 { width: 300px; }</style>");
             
-
             tolna.println("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>");
-           
-     
+          
             // Web Page
             tolna.println("</head><body><h1>ESP8266 Tolna</h1>");  
-        
+            // Sliders
             tolna.println("<p>Left limit: <span id=\"servoPos\"></span></p>");          
             tolna.println("<input type=\"range\" min=\"0\" max=\"100\" class=\"slider\" id=\"servoSlider\" onchange=\"servo(this.value)\" value=\""+valueString+"\"/>");
             tolna.println("<br><br><br>");
@@ -138,8 +137,8 @@ void loop(){
               valueString = header.substring(pos1+3, pos2);
               String index = header.substring(pos1+1, pos1+2); 
               // do something more with 3 variables
-              //myservo.write(valueString.toInt());
-               static int slider[3];                      //array 3 values
+              // myservo.write(valueString.toInt());
+              static int slider[3];                         //array 3 values
               slider [index.toInt()-1]=valueString.toInt(); //this is the final result
               // print 3 variables
               Serial.print(" Received= "); Serial.print(header.substring(pos1+1, pos1+2));Serial.print("  "); Serial.print(valueString); Serial.println("  ");
