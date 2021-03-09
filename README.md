@@ -5,5 +5,8 @@ Forked from : https://randomnerdtutorials.com/esp32-servo-motor-web-server-ardui
 
 The example shows 3 sliders, but it could be extended to any number. 
 
-Sliders are indexed in a rude manner (added 2 numeric characters for index), and the Get function decoder extracts the index and the value.
+Sliders are indexed in a rude manner (added 2 numeric characters for index), 
+
+the Get function decoder extracts the index and the value.
+
 Slider values are stored in slider[index] array.
