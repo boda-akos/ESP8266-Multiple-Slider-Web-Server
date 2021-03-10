@@ -9,4 +9,4 @@ Sliders are indexed in a rude manner (added 2 numeric characters for index),
 
 the Get function decoder extracts the index and the value.
 
-Slider values are stored in slider[index] array.
+Slider values are stored in array.
