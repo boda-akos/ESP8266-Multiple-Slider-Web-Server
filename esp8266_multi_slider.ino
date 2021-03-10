@@ -92,10 +92,7 @@ void loop(){
             
             tolna.println("<style>body { text-align: center; font-family: \"Trebuchet MS\", Arial; margin-left:auto; margin-right:auto;}");
             tolna.println(".slider { width: 300px; }</style>");
-            
-            tolna.println("<style>body { text-align: center; font-family: \"Trebuchet MS\", Arial; margin-left:auto; margin-right:auto;}");
-            tolna.println(".slider1 { width: 300px; }</style>");
-            
+        
             tolna.println("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>");
           
             // Web Page
