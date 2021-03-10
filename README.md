@@ -7,6 +7,6 @@ The example shows 3 sliders, but it could be extended to any number.
 
 Sliders are indexed in a rude manner (added 2 numeric characters for index), 
 
-the Get function decoder extracts the index and the value.
+on reception the index and the value extracted.
 
 Slider values are stored in array.
